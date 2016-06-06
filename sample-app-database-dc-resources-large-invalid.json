@@ -113,12 +113,12 @@
                     },
                     "resources": {
                         "limits": {
-                            "cpu": "3",
-                            "memory": "3Gi"
+                            "cpu": "500m",
+                            "memory": "512Mi"
                         },
                         "requests": {
-                            "cpu": "2",
-                            "memory": "2Gi"
+                            "cpu": "400m",
+                            "memory": "512Mi"
                         }
                     }
                 },
