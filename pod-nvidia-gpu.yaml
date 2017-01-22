@@ -1,0 +1,11 @@
+ apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-nvidia-gpu
+spec:
+  containers:
+  - name: nvidia-gpu
+    image: nginx
+    resources:
+      limits:
+        alpha.kubernetes.io/nvidia-gpu: 1
