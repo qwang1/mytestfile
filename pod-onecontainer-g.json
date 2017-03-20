@@ -1,0 +1,36 @@
+{
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "pod-onecontainer-g",
+        "labels": {
+            "name": "pod-onecontainer-g"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "pod-onecontainer-g-c1",
+                "image": "jhou/hello-openshift-fedora",
+                "resources": {
+                    "limits": {
+                        "cpu": "100m",
+                        "memory": "100Mi"
+                    },
+                    "requests": {
+                        "cpu": "100m",
+                        "memory": "100Mi"
+                    }
+                },
+                "ports": [
+                    {
+                        "containerPort": 8081,
+                        "protocol": "TCP"
+                    }
+                ],
+                "imagePullPolicy": "IfNotPresent"
+            }
+        ],
+        "restartPolicy": "Always"
+    }
+}
