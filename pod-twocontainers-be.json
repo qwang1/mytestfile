@@ -1,0 +1,49 @@
+{
+    "kind": "Pod",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "pod-twocontainers-be",
+        "labels": {
+            "name": "pod-twocontainers-be"
+        }
+    },
+    "spec": {
+        "containers": [
+            {
+                "name": "pod-twocontainers-be-c1",
+                "image": "jhou/hello-openshift",
+                "resources": {
+                    "requests": {
+                        "cpu": "0",
+                        "memory": "0"
+                    }
+                },
+                "ports": [
+                    {
+                        "containerPort": 8080,
+                        "protocol": "TCP"
+                    }
+                ],
+                "imagePullPolicy": "IfNotPresent"
+            },
+            {
+                "name": "pod-twocontainers-be-c2",
+                "image": "jhou/hello-openshift-fedora",
+                "resources": {
+                    "requests": {
+                        "cpu": "0",
+                        "memory": "0"
+                    }
+                },
+                "ports": [
+                    {
+                        "containerPort": 8081,
+                        "protocol": "TCP"
+                    }
+                ],
+                "imagePullPolicy": "IfNotPresent"
+            }
+        ],
+        "restartPolicy": "Always"
+    }
+}
