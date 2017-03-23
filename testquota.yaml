@@ -5,7 +5,7 @@ metadata:
 spec:
   hard:
     cpu: "30"
-    memory: 16Gi
+    memory: 10Gi
     persistentvolumeclaims: "20"
     pods: "20"
     replicationcontrollers: "30"
