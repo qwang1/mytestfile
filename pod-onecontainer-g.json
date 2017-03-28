@@ -14,12 +14,12 @@
                 "image": "jhou/hello-openshift-fedora",
                 "resources": {
                     "limits": {
-                        "cpu": "900m",
-                        "memory": "900Mi"
+                        "cpu": "600m",
+                        "memory": "600Mi"
                     },
                     "requests": {
-                        "cpu": "900m",
-                        "memory": "900Mi"
+                        "cpu": "600m",
+                        "memory": "600Mi"
                     }
                 },
                 "ports": [
