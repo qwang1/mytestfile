@@ -14,12 +14,12 @@
                 "image": "jhou/hello-openshift",
                 "resources": {
                     "limits": {
-                        "cpu": "300m",
-                        "memory": "300Mi"
+                        "cpu": "100m",
+                        "memory": "100Mi"
                     },
                     "requests": {
-                        "cpu": "300m",
-                        "memory": "300Mi"
+                        "cpu": "100m",
+                        "memory": "100Mi"
                     }
                 },
                 "ports": [
@@ -35,12 +35,12 @@
                 "image": "jhou/hello-openshift-fedora",
                 "resources": {
                     "limits": {
-                        "cpu": "400m",
-                        "memory": "400Mi"
+                        "cpu": "200m",
+                        "memory": "200Mi"
                     },
                     "requests": {
-                        "cpu": "400m",
-                        "memory": "400Mi"
+                        "cpu": "200m",
+                        "memory": "200Mi"
                     }
                 },
                 "ports": [
