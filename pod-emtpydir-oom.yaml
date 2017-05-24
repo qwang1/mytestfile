@@ -1,0 +1,33 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: pod-emtpydir-oom
+  labels:
+    name: pod-emtpydir-oom
+spec:
+  containers:
+  - name: c1
+    image: jhou/hello-openshift
+    ports:
+    - containerPort: 8080
+      protocol: TCP
+    resources:
+      limits:
+        memory: 1Gi
+        cpu: 1
+    command:
+    - dd
+    - if=/dev/zero
+    - of=/mnt/zero
+    - bs=1M
+    - count=2000
+    volumeMounts:
+    - name: myvol
+      mountPath: "/mnt"
+    terminationMessagePath: "/dev/termination-log"
+    imagePullPolicy: IfNotPresent
+  volumes:
+  - name: myvol
+    emptyDir:
+      medium: Memory
+  restartPolicy: Always
