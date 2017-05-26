@@ -30,4 +30,4 @@ spec:
   - name: myvol
     emptyDir:
       medium: Memory
-  restartPolicy: Never
+  restartPolicy: Always
