@@ -14,7 +14,7 @@ spec:
     resources:
       limits:
         memory: 1Gi
-        cpu: 1
+        cpu: 500m
     command:
     - dd
     - if=/dev/zero
@@ -30,4 +30,4 @@ spec:
   - name: myvol
     emptyDir:
       medium: Memory
-  restartPolicy: Never
+  restartPolicy: Always
