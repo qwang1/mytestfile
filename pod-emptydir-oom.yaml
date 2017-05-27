@@ -1,9 +1,9 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: pod-emtpydir-oom
+  name: pod-emptydir-oom
   labels:
-    name: pod-emtpydir-oom
+    name: pod-emptydir-oom
 spec:
   containers:
   - name: c1
